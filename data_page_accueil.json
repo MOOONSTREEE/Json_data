@@ -1,5 +1,5 @@
-const liste_site = [
-{ nom: "Deezer", url: "https://www.deezer.com/fr/", url_image: "./Images/Deezer.png"},
+[
+  { nom: "Deezer", url: "https://www.deezer.com/fr/", url_image: "./Images/Deezer.png"},
 { nom: "Netflix", url: "https://www.netflix.com/", url_image: "./Images/Netflix.png"},
 {"nom": "Apple", "url": "https://www.apple.com/fr/", "url_image": "./Images/Apple.png"},
 {"nom": "UHA", "url": "https://e-services.uha.fr/fr/index.html", "url_image": "./Images/UHA.png"},
@@ -8,15 +8,3 @@ const liste_site = [
 {"nom": "Gmap", "url": "https://www.google.com/maps/", "url_image": "./Images/Gmap.png"},
 {"nom": "Wiki", "url": "https://fr.wikipedia.org/wiki/Wiki", "url_image": "./Images/Wiki.png"}
 ]
-
-const flexConteneur = document.getElementById("conteneur_flex");
-liste_site.forEach((site) => {
-const flexItem = document.createElement("figure");
-flexItem.classList.add("f_item");
-flexItem.innerHTML = `
-<a href="${site.url}" class="info_bulle">
-<img src="${site.url_image}">
-<span class="ib-text">${site.nom}</span>
-</a>`;
-flexConteneur.appendChild(flexItem);
-});
